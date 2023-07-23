@@ -16,7 +16,7 @@ function switchSlide(number, project, event) {
     if (project == "mobala") {
         list = mobala
     }
-    else if (project == "admajee") {
+    else if (project == "adamjee") {
         list = adamjee
     }
     else if (project == "sbzimandi") {
@@ -27,6 +27,45 @@ function switchSlide(number, project, event) {
     siblings.forEach((element, index) => {
         if (index == targetIndex) {
             event.target.classList.toggle("cicle-fill");
+            document.getElementById(list[index]).style.display = "flex"
+        }
+        else {
+            element.classList.remove("cicle-fill")
+            document.getElementById(list[index]).style.display = "none"
+        }
+    })
+}
+
+function switchFromClick(number, project, event) {
+    number = number + 1
+    let list;
+    let limit;
+    let siblings;
+    if (project == "mobala") {
+        list = mobala
+        limit = 6
+    }
+    else if (project == "adamjee") {
+        list = adamjee
+        limit = 6
+    }
+    else if (project == "sbzimandi") {
+        list = sbzimandi
+        limit = 2
+    }
+    if (event.target.localName == "div") {
+        siblings = Array.from(event.target.parentNode.parentNode.children);
+    }
+    else {
+        siblings = Array.from(event.target.parentNode.parentNode.parentNode.children);
+    }
+    siblings = Array.from(siblings[1].children);
+    if (number > limit) {
+        number = 0
+    }
+    siblings.forEach((element, index) => {
+        if (index == number) {
+            element.classList.toggle("cicle-fill");
             document.getElementById(list[index]).style.display = "flex"
         }
         else {
@@ -128,18 +167,20 @@ window.addEventListener(
     false,
 );
 document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-        nameElement.classList.toggle("show-name")
-    }, 1000);
-    setTimeout(function () {
-        arrow.classList.toggle("show-name")
-    }, 1300);
+    if (window.location.hash == "" || window.location.hash == "me") {
+        setTimeout(function () {
+            nameElement.classList.toggle("show-name")
+        }, 1000);
+        setTimeout(function () {
+            arrow.classList.toggle("show-name")
+        }, 1300);
+    }
 });
 
 document.getElementById("down").addEventListener("click", function () {
     setTimeout(function () {
         arrow.classList.remove("show-name")
     }, 1000);
-    window.location.href="#aboutMe"
+    window.location.href = "#aboutMe"
 })
 
