@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Sofia|Lobster|Grandiflora One|Montserrat|Playfair Display">
+
+</head>
+
+<body>
+  <!-- <div class="mainDiv"> -->
+  <nav id="navbar" class="position-fixed navBar ">Noor Sheikh</nav>
+  <div class="section d-flex align-items-center" id="me">
+    <div id="fading-name" class="text-center nameDiv" style="width: 100vw;color: white;">
+      <h1 class="name">Noor Sheikh</h1>
+      <h4>Software Developer <>
+      </h4>
+    </div>
+  </div>
+  <div class="sideInfo" id="SideInfo">
+    <p class="heading">About Me</p>
+  </div>
+  <div id="downArrow">
+    <div id="down"><img style="height: 90px;" src="./src/down-arrow-svgrepo-com.svg" /></div>
+  </div>
+  <div class="sideInfo" id="SideProjectInfo">
+    <p class="heading">Projects</p>
+  </div>
+  <div class="emailInfo" id="EmailInfo">
+    <a href="mailto:noorshyk20@gmail.com" id="email" class="heading">noorshyk20@gmail.com</a>
+  </div>
+  <div class="bottomInfo" id="BottomInfo">
+    <p style="margin-right: 10px;">Contact: +923010244331</p>
+    <a class="link" href="https://www.linkedin.com/in/noor-sheikh-531108206" target="_blank">LinkedIn</a>
+  </div>
+  <div class="section d-flex align-items-center" id="aboutMe">
+
+    <div class="aboutText" id="AboutText">
+      <h1 class="text-center">Hi there!</h1>
+      I'm Noor, a dedicated software developer with over a year of experience in
+      both frontend and backend technologies. Currently pursuing a Bachelors's degree in Computer Science from the
+      esteemed University of Karachi.
+
+      My expertise lies in crafting efficient and user-friendly software solutions, and I specialize in working
+      with React, Next.js, ASP.NET, .NET Core, and Node.js. Throughout my journey, I've delivered high-quality
+      projects that align with client needs and industry standards.
+
+      My passion for staying up-to-date with the latest trends in technology drives me to continuously learn and
+      grow. I thrive in dynamic team environments, where collaborative efforts and problem-solving skills enable
+      us to achieve remarkable results.
+
+      For examples of my work, please feel free to explore my portfolio. If you have any questions or potential
+      opportunities to discuss, I'm excited to connect with you! Let's create exceptional software solutions
+      together.
+    </div>
+  </div>
+  <div class="section" id="project1">
+    <div class="d-flex align-items-center section">
+      <div class="project-title" id="titleMobala">
+        <h2>Mobala FX</h2>
+        <h4>Web App</h4>
+      </div>
+      <div style="margin-right: auto;">
+        <div class="centerCard">
+          <div id="mobala0" class="para">
+            <p>
+              Mobala FX is an innovative money exchange platform designed to facilitate
+              seamless transactions between users and money changers. By enabling direct interactions
+              without the need for traditional banks, people can experience the freedom of exchanging
+              currencies conveniently. </p>
+          </div>
+          <div id="mobala1" style="display: none;"><img style="width: 45vw;height: 45vh;" src="./src/mobala.png" />
+          </div>
+          <div id="mobala2" style="display: none;" class="para">
+            <p>
+              As a full-stack developer, I played a pivotal role in leading both frontend and backend
+              development, overseeing the project's progress to ensure its successful realization.
+              This cutting-edge project utilizes a diverse technology stack, incorporating JavaScript,
+              HTML, CSS, C#, and the React framework for the frontend, along with Dotnet Core for the
+              backend.
+            </p>
+          </div>
+          <div id="mobala3" style="display: none;"><img style="width: 45vw;height: 45vh;" src="./src/mobalaChat.png" />
+          </div>
+          <div id="mobala4" style="display: none;" class="para">
+            <p>
+              One of the prominent features of Mobala FX is its end-to-end encrypted chat system, ensuring
+              secure communication during money exchange transactions.
+            </p>
+          </div>
+          <div id="mobala5" style="display: none;" class="para">
+            <p>
+              Throughout the development process, we encountered various challenges, particularly in
+              establishing a reliable peer-to-peer connection between users. The implementation of
+              real-time notifications, messages, and order invitations posed a novel experience for me as
+              it was my first project in this domain.
+            </p>
+          </div>
+          <div id="mobala6" style="display: none;" class="para">
+            <p>
+              To surmount these obstacles, we adopted the ASP.NET SignalR library, which facilitated
+              seamless peer-to-peer connections using hubs. This decision proved instrumental in achieving
+              an effective and efficient solution for the platform.
+            </p>
+          </div>
+        </div>
+        <div class="detectors">
+          <div class="circles cicle-fill" onclick="switchSlide(0,'mobala',event)"></div>
+          <div class="circles" onclick="switchSlide(1,'mobala',event)"></div>
+          <div class="circles" onclick="switchSlide(2,'mobala',event)"></div>
+          <div class="circles" onclick="switchSlide(3,'mobala',event)"></div>
+          <div class="circles" onclick="switchSlide(4,'mobala',event)"></div>
+          <div class="circles" onclick="switchSlide(5,'mobala',event)"></div>
+          <div class="circles" onclick="switchSlide(6,'mobala',event)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="project2">
+    <div class="d-flex align-items-center section">
+      <div class="project-title" id="titleAdamjee">
+        <h2>Adamjee Academy</h2>
+        <h4>Mobile App</h4>
+      </div>
+      <div style="margin-right: auto;">
+        <div class="centerCard">
+          <div id="adamjee0" class="para">
+            <p>
+              The Adamjee Academy app is a cross-platform application that serves as a vital communication
+              tool between the academy, enrolled students, and their parents. Its primary objective is to
+              keep parents informed about their children's attendance, academic results, class schedules,
+              and whether their child was present during a particular class session. </p>
+          </div>
+          <div id="adamjee1" style="display: none; ">
+            <img style="height: 45vh;margin: auto;" src="./src/adamjee.jpeg" />
+            <img style="height: 45vh;margin: auto;" src="./src/login.jpeg" />
+          </div>
+          <div id="adamjee2" style="display: none;" class="para">
+            <p>
+              As a dedicated backend developer, I played a pivotal role in spearheading the backend
+              development process. My responsibilities encompassed creating APIs, designing the database
+              structure, and proficiently querying data. Throughout the development cycle, I diligently
+              monitored the project's progression to ensure its successful realization.
+
+            </p>
+          </div>
+          <div id="adamjee3" style="display: none;">
+            <img style="height: 45vh;margin: auto;" src="./src/dashboard.jpeg" />
+            <img style="height: 45vh;margin: auto;" src="./src/attendance.jpeg" />
+          </div>
+          <div id="adamjee4" style="display: none;" class="para">
+            <p>
+              This cutting-edge project leverages a versatile technology stack, incorporating TypeScript,
+              HTML, CSS, C#, and the React Native framework for the frontend, while relying on Dotnet Core
+              for robust backend support and Firebase for realtime messaging service.
+
+            </p>
+          </div>
+          <div id="adamjee5" style="display: none;" class="para">
+            <p>
+              Throughout the development journey, we encountered several challenges, notably in
+              implementing real-time notifications for parents. Enabling parents to receive timely updates
+              about their children's classes and absences proved to be a novel experience, especially as
+              it was my inaugural project in this domain.
+            </p>
+          </div>
+          <div id="adamjee6" style="display: none;" class="para">
+            <p>
+              To conquer this obstacle, we strategically adopted the Firebase Realtime Message Service,
+              which allowed us to efficiently store device information and promptly send relevant updates
+              to users. By leveraging this solution, we achieved seamless real-time notifications,
+              enhancing the overall effectiveness of the platform.
+
+            </p>
+          </div>
+        </div>
+        <div class="detectors">
+          <div class="circles cicle-fill" onclick="switchSlide(0,'admajee',event)"></div>
+          <div class="circles" onclick="switchSlide(1,'admajee',event)"></div>
+          <div class="circles" onclick="switchSlide(2,'admajee',event)"></div>
+          <div class="circles" onclick="switchSlide(3,'admajee',event)"></div>
+          <div class="circles" onclick="switchSlide(4,'admajee',event)"></div>
+          <div class="circles" onclick="switchSlide(5,'admajee',event)"></div>
+          <div class="circles" onclick="switchSlide(6,'admajee',event)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="project3">
+    <div class="d-flex align-items-center section">
+      <div class="project-title" id="titleSabzi">
+        <h2>Sabzi Mandi</h2>
+        <h4>Mobile App</h4>
+      </div>
+      <div style="margin-right: auto;">
+        <div class="centerCard">
+          <div id="sbzimandi0" class="para">
+            <p>
+              Initially, there was a desktop application designed to facilitate the trading of goods in a location known
+              as Sbzi Mandi. However, to enhance efficiency and convenience, the platform is now undergoing a
+              transformation into a mobile app. This transition aims to enable users to manage their trading activities
+              swiftly and efficiently on the go. By becoming a mobile app, the platform seeks to save users valuable
+              time and provide them with a user-friendly, portable solution for their trading needs. </p>
+          </div>
+          <div id="sbzimandi1" style="display: none;" class="para">
+            <p>
+              As the project is currently in the development phase, my role involves working as a backend developer.
+              Specifically, I am responsible for creating APIs and optimizing queries to facilitate the smooth retrieval
+              of data. Through the implementation of well-designed APIs, I aim to establish a seamless connection
+              between the mobile app and the server, allowing users to access and exchange information effortlessly.
+            </p>
+          </div>
+          <div id="sbzimandi2" style="display: none;" class="para">
+            <p>
+              This cutting-edge project leverages a versatile technology stack, incorporating TypeScript,
+              HTML, CSS, C#, and the React Native framework for the frontend, while relying on Dotnet Core
+              for robust backend support.
+
+            </p>
+          </div>
+        </div>
+        <div class="detectors">
+          <div class="circles cicle-fill" onclick="switchSlide(0,'sbzimandi',event)"></div>
+          <div class="circles" onclick="switchSlide(1,'sbzimandi',event)"></div>
+          <div class="circles" onclick="switchSlide(2,'sbzimandi',event)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- </div> -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>

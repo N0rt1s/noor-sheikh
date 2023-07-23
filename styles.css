@@ -1,0 +1,207 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  margin-top: -3vh;
+  scroll-behavior: smooth;
+
+}
+
+.mainDiv {
+  background-color: black;
+}
+
+.section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background: black;
+}
+
+#downArrow{
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+  bottom: 0%;
+  opacity: 0;
+}
+
+#me {
+  /* background-image: url('./src/v617batch2-kul-05-technology.jpg'); */
+  height: 103vh;
+}
+
+.navBar {
+  width: 100vw;
+  text-align: center;
+  margin-top: -30px;
+  color: wheat;
+  transition: margin-top 1s;
+  font-family: "Lobster", serif;
+  font-size: 20px;
+}
+
+.footer {
+  width: 100vw;
+  text-align: center;
+  /* margin-top: 0px; */
+  color: #202428;
+  transition: margin-top 1s;
+  font-family: "Lobster", serif;
+  font-size: 20px;
+}
+
+.show-navbar {
+  margin-top: 30px;
+}
+
+.name {
+  font-size: 60px;
+  margin: 0;
+}
+
+.nameDiv {
+  color: wheat;
+  opacity: 0;
+  font-family: "Lobster", serif;
+}
+
+.show-name {
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+
+#down{
+  cursor: pointer;
+}
+
+.aboutSection {
+  display: flex;
+}
+
+.sideInfo {
+  position: fixed;
+  top: 50%;
+  left: -4%;
+  transition: left 1s;
+}
+
+.show-sideInfo {
+  left: 0%;
+}
+
+.emailInfo {
+  position: fixed;
+  top: 50%;
+  right: -8%;
+  transition: right 1s;
+  rotate: 270deg;
+  cursor: pointer;
+}
+
+.show-emailInfo {
+  right: -2%;
+}
+
+.bottomInfo {
+  position: fixed;
+  bottom: -6%;
+  transition: bottom 1s;
+  display: flex;
+  left: 11%;
+  font-family: "Grandiflora One", serif;
+  color: wheat;
+}
+
+.show-bottomInfo{
+  bottom: 0%;
+}
+
+.link {
+  text-decoration: none;
+  color: wheat;
+}
+
+.link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.heading {
+  rotate: 270deg;
+  font-family: "Grandiflora One", serif;
+  color: wheat;
+  text-decoration: none;
+}
+
+#email:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.email:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.aboutText {
+  font-size: larger;
+  color: whitesmoke;
+  margin: 0px 150px;
+  font-family: "Playfair Display", serif;
+  /* font-family: "Montserrat", serif; */
+  opacity: 0;
+}
+
+.project-title {
+  margin-left: auto;
+  padding: 0px 10px;
+  text-align: center;
+  color: wheat;
+  font-family: "Sofia", serif;
+  opacity: 0;
+}
+
+.centerCard {
+  width: 45vw;
+  height: 45vh;
+  background: #2b2b2b;
+  /* margin-right: auto; */
+  color: white;
+  font-size: large;
+  cursor: e-resize;
+}
+
+.para {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  font-family: "Playfair Display", serif;
+  padding: 0px 20px;
+}
+
+.detectors {
+  width: 45vw;
+  padding: 5px;
+  display: flex;
+  justify-content: end;
+}
+
+.circles {
+  width: 15px;
+  height: 15px;
+  border: 1px solid wheat;
+  border-radius: 50%;
+  margin-right: 2px;
+}
+
+.cicle-fill {
+  background: wheat;
+}
