@@ -5,6 +5,8 @@ html {
   height: 100%;
   margin-top: -3vh;
   scroll-behavior: smooth;
+  overflow-y: hidden;
+  background-color: black;
 
 }
 
@@ -19,7 +21,7 @@ html {
   background: black;
 }
 
-#downArrow{
+#downArrow {
   position: fixed;
   width: 100vw;
   text-align: center;
@@ -72,7 +74,7 @@ html {
   transition: opacity 1s;
 }
 
-#down{
+#down {
   cursor: pointer;
 }
 
@@ -114,7 +116,7 @@ html {
   color: wheat;
 }
 
-.show-bottomInfo{
+.show-bottomInfo {
   bottom: 0%;
 }
 
@@ -204,4 +206,24 @@ html {
 
 .cicle-fill {
   background: wheat;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -10,7 +10,11 @@ let currentSection = 0
 let scrolling = false
 const nameElement = document.getElementById("fading-name");
 const arrow = document.getElementById("downArrow");
-
+const navbar = document.getElementById("navbar");
+const sideInfo = document.getElementById("SideInfo");
+const emailInfo = document.getElementById("EmailInfo");
+const bottomInfo = document.getElementById("BottomInfo");
+const sideProjectInfo = document.getElementById("SideProjectInfo");
 function switchSlide(number, project, event) {
     let list;
     if (project == "mobala") {
@@ -75,23 +79,41 @@ function switchFromClick(number, project, event) {
     })
 }
 
-window.addEventListener(
-    'scroll',
-    function handleScroll(e) {
-        if (scrolling) {
+document.getElementById("down").addEventListener("click", function () {
+    scrolling = true
+    document.querySelector("#aboutMe").scrollIntoView();
+    navbar.classList.toggle("show-navbar");
+    sideInfo.classList.toggle("show-sideInfo")
+    emailInfo.classList.toggle("show-emailInfo")
+    bottomInfo.classList.toggle("show-bottomInfo")
+    nameElement.classList.remove("show-name");
+    arrow.classList.remove("show-name")
+    setTimeout(function () {
+        document.getElementById(titles[currentSection]).classList.toggle("show-name")
+        for (let i = 0; i < titles.length; i++) {
+            if (currentSection != i) {
+                document.getElementById(titles[i]).classList.remove("show-name")
+            }
+        }
+    }, 500);
+    currentSection++;
+    setTimeout(function () {
+        scrolling = false
+    }, 1000);
+})
+document.addEventListener("DOMContentLoaded", function () {
+    const section1 = document.querySelector("#me");
+    const section2 = document.querySelector("#aboutMe");
+
+    document.addEventListener("wheel", function (event) {
+        if (scrolling == true) {
 
         }
         else {
-            const navbar = document.getElementById("navbar");
-            const sideInfo = document.getElementById("SideInfo");
-            const emailInfo = document.getElementById("EmailInfo");
-            const bottomInfo = document.getElementById("BottomInfo");
-            const sideProjectInfo = document.getElementById("SideProjectInfo");
+            event.preventDefault();
             scrolling = true
-            const scrollTopPosition = window.pageYOffset || document.documentElement.scrollTop;
-            console.log("scrollTopPosition=>", scrollTopPosition, " lastScrollTop=>", lastScrollTop)
-            document.body.style.overflowY = 'hidden';
-            if (scrollTopPosition > lastScrollTop) {
+            if (event.deltaY > 0) {
+                const toSection = document.querySelector(sections[currentSection + 1]);
                 if (currentSection == 4) {
 
                 }
@@ -117,12 +139,13 @@ window.addEventListener(
                             }
                         }
                     }, 500);
-                    this.window.location.href = sections[currentSection + 1];
+                    toSection.scrollIntoView()
                     currentSection++;
                     console.log('scrolling down and currentsection=>', currentSection);
-                    e.preventDefault();
                 }
-            } else if (scrollTopPosition < lastScrollTop) {
+
+            } else {
+                const toSection = document.querySelector(sections[currentSection - 1]);
                 if (currentSection == 0) {
 
                 }
@@ -149,24 +172,17 @@ window.addEventListener(
                             }
                         }
                     }, 500);
-                    this.window.location.href = sections[currentSection - 1];
+                    toSection.scrollIntoView()
                     currentSection--;
                     console.log('scrolling up and currentsection=>', currentSection);
-                    e.preventDefault();
+
                 }
-
             }
-            setTimeout(() => {
-                scrolling = false;
-                document.body.style.overflowY = 'auto';
-                lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            }, 1500);
+            setTimeout(function () {
+                scrolling = false
+            }, 1000);
         }
-
-    },
-    false,
-);
-document.addEventListener("DOMContentLoaded", function () {
+    });
     if (window.location.hash == "" || window.location.hash == "me") {
         setTimeout(function () {
             nameElement.classList.toggle("show-name")
@@ -176,11 +192,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1300);
     }
 });
-
-document.getElementById("down").addEventListener("click", function () {
-    setTimeout(function () {
-        arrow.classList.remove("show-name")
-    }, 1000);
-    window.location.href = "#aboutMe"
-})
-
